@@ -119,21 +119,3 @@ muestren en consola esa cadena de texto pero convirtiendo
 los caracteres en una sucesion de minusculas y mayusculas, es decir:
 
 resultado -> "cAdEnItA"; */
-
-
-var cadena = "cadenita";
-
-for (var i = 0; i < cadena.length; i++) {
-    if (i % 2 == 0) {
-        cadena[i] = cadena[i].toUpperCase();
-    } else {
-        cadena[i] = cadena[i].toUpperCase();
-    }
-}
-
-console.log(cadena);
-
-
-
-
-
