@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
-//import Tarjeta from './components/tarjeta';
-import Contador from './components/contador';
+import VerArticulos from './components/verarticulos.js'
+import Contador from "./components/contador.js";
+import HolaMundo from "./components/holamundo.js";
+import Tarjeta from "./components/tarjeta.js";
 
 class App extends Component {
 
-    state = {
-        contadores: [
-            'Omega', 
-            'Foxtrot',
-            'Charlie'
-        ]
-    }
-
-/*     borrarComponente(){
-        
-        setState({
-            contadores: []
-        })
-    } */
+    state = {}
 
     render() { 
         return (
             <div>
-                {this.state.contadores.map(contador => <Contador onDelete={this.borrarComponente} key={contador} id={contador}>{contador}</Contador>)}
+                <Tarjeta />
+                <HolaMundo />
+                <VerArticulos />
             </div>
+            
         );
     }
 }
