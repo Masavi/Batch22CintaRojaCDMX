@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import VerArticulos from './components/verarticulos.js'
-import Contador from "./components/contador.js";
-import HolaMundo from "./components/holamundo.js";
-import Tarjeta from "./components/tarjeta.js";
+import { BrowserRouter, Route } from 'react-router-dom';
+
+import VerArticulos from './components/verarticulos.js';
+import CrearArticulo from './components/creararticulo.js';
 
 class App extends Component {
 
@@ -10,11 +10,13 @@ class App extends Component {
 
     render() { 
         return (
-            <div>
-                <Tarjeta />
-                <HolaMundo />
-                <VerArticulos />
-            </div>
+
+            <BrowserRouter>
+                <main>
+                    <Route exact path="/creararticulo" component={CrearArticulo} />
+                    <Route exact path="/verarticulos" component={VerArticulos} />   
+                </main>
+            </BrowserRouter>
             
         );
     }
